@@ -1,0 +1,283 @@
+html {  
+/*  background: url(background.jpg) no-repeat center center fixed; */
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  height: 100%;
+}
+
+body {
+    background-color: #aaa;
+    height: 100%;
+    padding: 0;
+    margin: 0;
+    font-family: "Helvetica Neue", Helvetica, Roboto, Arial, sans-serif;
+    font-weight: normal;
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale; 
+}
+
+.content-area {
+    background-color: rgba(999,999,999,.7); 
+    margin-left: 25%;
+    margin-right: 25%;
+    margin-top: .5%;
+    margin-bottom: .5%;
+    padding-top: 1%;
+    padding-bottom: 1%;
+    padding-left: 5%;
+    padding-right: 5%;
+}
+
+.wrapper {
+    min-height: 100%;
+    height: auto !important;
+    height: 100%;
+    margin: 0 auto -4em;
+}
+
+h1 {
+    font-family: "Lucida Sans Unicode", "Lucida Grande", sans serif;
+    color:black;
+    font-weight: bold;
+    text-align: center;
+    font-size: 1.7em;
+}
+
+h2 {
+    color: #000000;
+    font-family: "sansserif";
+    font-weight: bold;
+    text-align: center;
+    font-size: 1.25em;
+}
+
+h3 {
+    color: black;
+    font-family: 'times new roman';
+    font-weight: bold;
+    font-size: 1em;
+}
+
+h4 {
+    color: #000000;
+    font-family: "sansserif";
+    font-weight: bold;
+    font-size: .8em;	
+}
+
+h5 { 
+    color: #000000;
+    font-family: "sansserif";
+    font-weight: bold;
+    font-size: .6em;	
+}
+
+h6 {
+    color: #000000;
+    font-family: "sansserif";
+    font-weight: bold;
+    font-size: .5em;	
+}
+
+ol ol ol li {
+    list-style: lower-alpha
+}
+
+ol ol li {
+    font-weight: normal;
+    list-style: decimal;
+    padding-top: 0em
+}
+
+ol li {
+    font-weight: bold;
+    list-style: upper-roman;
+    padding-top: 1em
+}
+
+ul ul ul li { 
+    list-style: circle;
+}
+
+ul ul li { 
+    list-style: square;
+}
+
+ul li { 
+    list-style: disc;
+}
+
+p {
+    font-size: inherit;
+    line-height: 1.6;
+    margin-bottom: 1rem;
+    text-rendering: optimizeLegibility;
+}
+
+/* ===================  Form Sectoin  ==================================== 
+/* This section formats everything found in the form                        */
+
+textarea {
+  display: block;
+  box-sizing: border-box;
+  width: 100%;
+  height: 2.4375rem;
+  padding: 0.5rem;
+  border: 1px solid #000000;
+  margin: 0 0 1rem;
+  font-family: inherit;
+  font-size: 1rem;
+  color: #0a0a0a;
+  background-color: #fefefe;
+  box-shadow: inset 0 1px 2px rgba(10, 10, 10, 0.1);
+  border-radius: 3px;
+  transition: box-shadow 0.5s, border-color 0.25s ease-in-out;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+}
+
+fieldset {
+  border: #aaa;
+  padding: 0;
+  margin: 0; }
+
+legend {
+  margin-bottom: 0.5rem;
+}
+
+.fieldset {
+  border: 1px solid #cacaca;
+  padding: 1.25rem;
+  margin: 1.125rem 0; }
+  .fieldset legend {
+    background: #fefefe;
+    padding: 0 0.1875rem;
+    margin: 0;
+    margin-left: -0.1875rem; }
+  
+input[type="checkbox"],
+input[type="radio"] {
+  box-sizing: border-box;
+  /* 1 */
+  padding: 0;
+  /* 2 */ 
+}  
+
+
+/* ===================  Header Section  ==================================== 
+/* now i would have a section that corresponds to my html sections.          */
+header {
+    text-align: center;
+    background-color: #99ccff;
+/*    opacity: .7;*/
+    color: #000000;
+    padding-left: 0%;
+    padding-right: 0%;
+    padding-top: 1%;
+    padding-bottom: 1%;
+    margin-left: 25%;
+    margin-right: 25%;
+}
+
+
+
+/* =================== Footer Section ====================================== */
+
+footer {
+    text-align: center;
+    background-color: #99ccff;
+    width: 100%;
+    color: #000000;
+    padding-left: 0%;
+    padding-right: 0%;
+    padding-top: 1%;
+    padding-bottom: 1%;
+    margin-left: 0%;
+    margin-right: 0%;
+}
+
+/* ===================  Navigation Section  ================================= */
+
+nav ol li {
+    display:inline-block;
+    text-align: center;
+    list-style: none;
+    width: 16%; 
+}
+
+.nav-area {
+    margin-left: 25%;
+    margin-right: 25%;
+    margin-top: 0%;
+    margin-bottom: 0%;
+    padding-top: 0%;
+    padding-bottom: 0%;
+    padding-left: 0%;
+    padding-right: 0%;
+}
+
+
+/* ===================  Home Page        ==================================== */
+/* -------------------------------------------------------------------------- */
+
+#home {  
+    background-color: #aaaaaa;
+}
+
+#home p {
+    /* this rule will give all the paragraphs on the home page a first line  */
+    /* indent of 3 em. it only effects paragraphs that are contained inside  */
+    /* the element with the id of home, this replaces using an embeded or    */
+    /* level style */
+    text-indent: 3em;
+}
+
+/* ===================  General Class Section  ============================= */
+/* I can add any generic classes here. Technically i can place these rules   */
+/* anywhere in the style sheet. This just helps to organize everything.     */
+.firstLine {
+    text-indent: 3em;
+}
+
+figure.img-left {
+    border: thin solid darkslategray;
+    float: right;
+    margin-left: 1em;
+    padding: 0.5em;
+}
+
+figure {
+    border: none;
+    float: none;
+    padding: 0;
+}
+
+.image {
+    display: block;
+    text-align: center;
+}
+
+.small {
+    width: 240px;
+    height: 320px;
+}
+figcaption {
+    color: #000000;
+    font-style: italic;
+    text-align: center;
+}
+
+/* style the errors in the form so they are visible */
+.mistake {
+    color: #fff;
+    background-color:#800;
+    border: thin solid #000;
+}
+
+/* style the list of errors that will show before the form */
+#errors ol li{
+    color: #ff5555;
+}

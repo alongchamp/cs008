@@ -1,0 +1,182 @@
+html {  
+  background: url(stage.jpg) no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+/*  <cite>http://blogs.swa-jkt.com/swa/11246/files/2012/03/026-theatre-stage.jpg</cite>*/
+}
+
+body {
+    background-color: rgba(999,999,999,.5); 
+    margin-left: 20%;
+    margin-right: 20%;
+    margin-top: 5%;
+    margin-bottom: 10%;
+    padding-top: 5%;
+    padding-bottom: 0%;
+    padding-left: 5%;
+    padding-right: 5%;
+}
+
+h1 {
+    color:black;
+    font-family: "sansserif";
+    font-weight: bold;
+    text-align: center;
+    font-size: 1.5em;
+}
+
+h2 {
+    color: #000000;
+    font-family: "sansserif";
+    font-weight: bold;
+    text-align: center;
+    font-size: 1.25em;
+}
+
+h3 {
+    color: black;
+    font-family: 'times new roman';
+    font-weight: bold;
+    font-size: 1em;
+}
+
+h4 {
+    color: #000000;
+    font-family: "sansserif";
+    font-weight: bold;
+    font-size: .8em;	
+}
+
+h5 { 
+    color: #000000;
+    font-family: "sansserif";
+    font-weight: bold;
+    font-size: .6em;	
+}
+
+h6 {
+    color: #000000;
+    font-family: "sansserif";
+    font-weight: bold;
+    font-size: .5em;	
+}
+
+ol ol ol li {
+    list-style: lower-alpha
+}
+
+ol ol li {
+    font-weight: normal;
+    list-style: decimal;
+    padding-top: 0em
+}
+
+ol li {
+    font-weight: bold;
+    list-style: upper-roman;
+    padding-top: 1em
+}
+
+ul ul ul li { 
+    list-style: circle;
+}
+
+ul ul li { 
+    list-style: square;
+}
+
+ul li { 
+    list-style: disc;
+}
+
+p {
+    border-width: 5px;
+    border-style: none;
+}
+
+.paragraph-box {
+    background-color: #DDDDDD;
+    opacity: .8;
+    padding: 2%
+}
+
+/* ===================  Header Section  ==================================== 
+/* now i would have a section that corresponds to my html sections.          */
+header {
+    background-color: #0000ff;
+}
+
+.footer-area {
+    text-align: center;
+    background-color: #990033;
+    opacity: 1;
+    color: #ffD700;
+    padding-left: 0%;
+    padding-right: 0%;
+    padding-top: 1%;
+    padding-bottom: 1%;
+    margin-left: 0%;
+    margin-right: 0%;
+}
+
+/* ===================  Navigation Section  ================================= */
+
+nav ol li {
+    display:inline-block;
+    text-align: center;
+    list-style: none;
+    width: 18%;
+}
+
+
+/* ===================  Home Page        ==================================== */
+/* -------------------------------------------------------------------------- */
+#home {  
+    background-color: #aaaaaa;
+}
+
+#home p {
+    /* this rule will give all the paragraphs on the home page a first line  */
+    /* indent of 3 em. it only effects paragraphs that are contained inside  */
+    /* the element with the id of home, this replaces using an embeded or    */
+    /* level style */
+    text-indent: 3em;
+}
+
+/* ===================  General Class Section  ============================= */
+/* I can add any generic classes here. Technically i can place these rules   */
+/* anywhere in the style sheet. This just helps to organize everything.     */
+
+img { width: 50% ; height: 50%;
+
+}
+
+
+.firstLine {
+    text-indent: 3em;
+}
+
+figure.img-left {
+    border: thin solid darkslategray;
+    float: right;
+    margin-left: 1em;
+    padding: 0.5em;
+}
+
+figure {
+    border: none;
+    float: none;
+    padding: none;
+}
+
+.small {
+    width: 240px;
+    height: 320px;
+}
+figcaption {
+    color: #black;
+    font-style: italic;
+    text-align: center;
+}

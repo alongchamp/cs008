@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html>
+
+
+<head>
+	<link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+    <title>The University of Vermont -- WebAuth</title>
+	<link rel="stylesheet" type="text/css" href="/webauth/resources/sourcesanspro.css">
+	<link rel="stylesheet" type="text/css" href="/webauth/resources/login.css">
+    
+	<link href='https://fonts.googleapis.com/css?family=Lato' rel='stylesheet' type='text/css'>
+    <script src="/webauth/resources/modernizr-devel.js"></script>
+	<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+	<meta http-equiv="cache-control" content="no-cache" />
+    <meta content="width=device-width" name="viewport" />
+    <meta http-equiv="x-ua-compatible" content="IE=edge" >
+	<meta name="robots" content="noindex, nofollow" />
+	<meta name="author" content="The University of Vermont" />
+	<meta name="keywords" content="website" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+    <script>
+        $(function() {
+            var banner_width = 822;
+            if ( navigator.userAgent.match("Windows NT 5.1") ) {
+                $('body').prepend('<div id="uvm-warning-banner" style="width: ' + banner_width + 'px; margin: 0 auto; height: 7em; background: #333; color: #ddd; box-sizing: border-box; border: 0; font-family: arial, helvetica, sans-serif; font-size: 1.3em; line-height: 1.3em"><div style="background: #eee; float: left; padding: 1em"><img src="https://static.uvm.edu/it/images/no-windows-xp.png" style="width: 110px; height: auto" /></div><div style="padding: 0.8em 1em 1em 1em; float: left; width: 650px"><h2 style="font-size: 1.2em; line-height: 1.3em; margin: 0 0 0.4em 0">Your computer is running Windows XP. All support for XP ends on April 8<sup>th</sup>.</h2><p style="margin: 0; padding: 0; width: 100%">After this date, Microsoft will not fix security flaws, and web sites might stop working.<br />See <a href="http://go.uvm.edu/endofxp" style="color: #aaf">http://go.uvm.edu/endofxp</a> for details.</p></div></div>');
+            }
+        });
+        Modernizr.load({
+                test: Modernizr.input.placeholder,
+                nope: '/webauth/resources/placeholder-min-polyfill.js'
+        });
+    </script>
+
+</head>
+
+
+
+  
+<body onload="document.login.username.focus();">
+
+  <script type="text/javascript">
+  //clean out the logout tracking cookies
+    if (document.cookie && document.cookie != '') {
+      var split = document.cookie.split(';');
+      for (var i = 0; i < split.length; i++) {
+        var name_value = split[i].split("=");
+        name_value[0] = name_value[0].replace(/^ /, '');
+        if (name_value[0].indexOf('wa_logout_') != 0)
+          continue;
+        document.cookie = name_value[0] +'=; expires=Thu, 01-Jan-1970 00:00:01 GMT; path=/';
+      }
+    }
+  </script>
+<div id="login-topcontainer">
+    <header>
+        <div id="header-rest"></div>
+        <div id="header-bar"></div>
+    </header>
+  <div id="content-box">
+    <div id="auth-box">
+    <div id="auth-box-images" align="center">
+        <img id="login-tower" src="/webauth/images/uvm_tower.png" alt="UVM Tower Logo" />
+        <img id="login-myuvm-logo" src="/webauth/images/uvm_text.png" alt="The University of Vermont" />
+    </div>
+
+
+        <div id='auth-box-content' class="auth-box-trimmed">
+            <div id="box-banner" class="centered">
+                <span class="bold">LOGIN</span>
+            </div>
+            
+
+            <form name="login" action="/webauth/login" autocomplete="OFF" enctype="application/x-www-form-urlencoded" method="POST" class="centered">
+                <input type="hidden" name="RT" value="Vg6rLJu2WcSAA89Ui4YeY98FqqM18L+ebu5XaWk67vBo+0F6iU0Ch6rWfE76CRva45oDL6+3pxwm2GPM/mXMvAd93tndWe8UeH3AT1ztw7VpIayH28alh5sfZQ5l00E4RInFYd1kuwCWwZslhrXbxKGBQAKe5xNWv6TWBARQrGdT7TWAjW3Xmw3eR75tNyoeIZfoXJSf0bMHJHzLopY5AXY7lm01DFDwsiLTiatJFO6InJ5AwdsRZW4ujRiaTb9H1d0oy+cXWsKG914SVmXk8AUUswtCwkdw3A58LFjAjg5vZEXskowUYG2XNJQfBagc/OMJlv4BlvWE7KW0Qp4hI1kaMaE=" />
+                <input type="hidden" name="ST" value="VgfyPsMHPA7Pbmq0c6VdN+Dw/XLDLvmKk0zsH9AAhneNh3sfMpsUdgREPrGvnxJqDrGW2hZn78r9nsPz4ugYhsQXlQ2YuNMiadDcvPVnkZo7kPZMVFJjpMOffEAHd9KXztRufqQCqshQDtyfacnzSPTwuHKSM2V85uIQJnw1CQFSmQNs" />
+                <input type="hidden" name="login" value="yes" />
+                <div class="credDiv credDivNoFocus">
+                    <img src="/webauth/images/username_icn.png">
+                    <input type="text" name="username" value="" class="username" tabindex="1" placeholder="NetID" />
+                </div>
+                <div class="credDiv credDivNoFocus">
+                    <img src="/webauth/images/password_key.png">
+                    <input type="password" name="password" class="password" tabindex="2" placeholder="Password" />
+                </div>
+                <button type="submit" name="submit" class="submit" tabindex="4">Continue</button> 
+            </form>
+            <div id="login-password"><button class="helpBtn">Need Help?<img class="infoicon" src="/webauth/images/icons/info-circle.png"></button></div>
+        </div><!--auth-box-content-->
+                           <div class="helpWindow invisible">
+                        <div class="helpContent">
+                                
+                                <h3>What is this?</h3>
+                                <p>You are attempting to access a resource at the University of Vermont that is protected and requires a valid UVM affiliate NetID to access.</p>
+                                <h3 class="blockHdr">which option best describes you?</h3>
+                                <ul style="padding: 0em 0em 0em 2em;">
+                                    <li><button class="sudoTextBtn helpChoiceBtn curAffiliate">Current Student/Faculty/Staff</button></li>
+                                    <li><button class="sudoTextBtn helpChoiceBtn newStudent">New, Admitted Student</button></li>
+                                    <li><button class="sudoTextBtn helpChoiceBtn formerStudent">Former Student</button></li>
+                                    <li><button class="sudoTextBtn helpChoiceBtn dontKnow">I Don't Know</button></li>
+                                </ul>
+
+                                <script type="text/javascript">
+                                    var stockContent = {
+                                        accountConverge: "<p><span class='bold'>Some systems, like myUVM</span> will not be available to you until 24 hours after you have paid your acceptance fee. However, you can still set up your account now.</p>",
+                                        activateNetId: "<div><button class='wideBtn' onclick='window.open(\"https://account.uvm.edu/\", \"_blank\");'>Activate your NetID</button></div><div><button class='wideBtn' onclick='window.open(\"https://account.uvm.edu/\", \"_blank\");'>Reset a forgotten password</button></div>",
+                                        buttonBack: "<button class='backBtn'><img class='iconBtn' src='/webauth/images/icons/back.png'> Back</button>",
+                                        buttonHelp: "<div><button class='sudoTextBtn moreHelpBtn wideBtn'>Still need help? <img class='infoicon' src='/webauth/images/icons/info-circle.png'></button></div>",
+                                        buttonNo: "<div><button class='sudoTextBtn noBtn helpChoiceBtn'>No</button></div>",
+                                        buttonYes: "<div><button class='sudoTextBtn yesBtn helpChoiceBtn'>Yes</button></div>",
+                                        techSupport: "<p><span class='bold'>Technical support is available over the phone.</span> Call the UVM computer Helpline at (802) 656-2604 or email them anytime at helpline@uvm.edu</p>"
+                                    };
+
+                                    function backContent() {
+                                        $('.helpBackBtn').children().remove();
+                                        $('.helpContent').children().remove();
+                                        if(screenStack.length > 1) {
+                                            $('.helpBackBtn').html(stockContent['buttonBack']);
+                                            $('.backBtn').click(function() {
+                                                backContent();
+                                            });
+                                        }
+                                        $('.helpContent').append(screenStack.pop());
+                                    }
+
+                                    $('.newStudent').click(function() {
+                                        screenStack.push($('.helpContent').children().detach());
+                                        var nextStep = "<h3>Have you paid your deposit?</h3>";
+                                        nextStep += "<ul>";
+                                        nextStep += "<li>"+stockContent['buttonYes'];
+                                        nextStep += "<li>"+stockContent['buttonNo'];
+                                        nextStep += "</ul>";
+                                        $('.helpBackBtn').html(stockContent['buttonBack']);
+                                        $('.helpContent').append(nextStep);
+                                        $('.backBtn').click(function() {
+                                            backContent();
+                                        });
+                                        $('.yesBtn').click(function() {
+                                            screenStack.push($('.helpContent').children().detach());
+                                            var nextStep = stockContent['accountConverge'];
+                                            nextStep += stockContent['activateNetId'];
+                                            nextStep += stockContent['buttonHelp'];
+                                            $('.helpBackBtn').html(stockContent['buttonBack']);
+                                            $('.helpContent').append(nextStep);
+                                            $('.backBtn').click(function() {
+                                                backContent();
+                                            });
+                                            $('.moreHelpBtn').click(function() {
+                                                screenStack.push($('.helpContent').children().detach());
+                                                var nextStep = stockContent['techSupport'];
+                                                $('.helpBackBtn').html(stockContent['buttonBack']);
+                                                $('.helpContent').append(nextStep);
+                                                $('.backBtn').click(function() {
+                                                    backContent();
+                                                });
+                                            });
+                                        });
+                                        $('.noBtn').click(function() {
+                                            screenStack.push($('.helpContent').children().detach());
+                                            var nextStep = "<h3>Are you trying to access a system other than Webmail?</h3>";
+                                            nextStep += stockContent['buttonYes'];
+                                            nextStep += stockContent['buttonNo'];
+                                            $('.helpBackBtn').html(stockContent['buttonBack']);
+                                            $('.helpContent').append(nextStep);
+                                            $('.backBtn').click(function() {
+                                                backContent();
+                                            });
+
+                                            $('.yesBtn').click(function() {
+                                                screenStack.push($('.helpContent').children().detach());
+                                                var nextStep = stockContent['accountConverge'];
+                                                nextStep += stockContent['activateNetId'];
+                                                nextStep += stockContent['buttonHelp'];
+                                                $('.helpBackBtn').html(stockContent['buttonBack']);
+                                                $('.helpContent').append(nextStep);
+                                                $('.backBtn').click(function() {
+                                                    backContent();
+                                                });
+                                                $('.moreHelpBtn').click(function() {
+                                                    screenStack.push($('.helpContent').children().detach());
+                                                    var nextStep = stockContent['techSupport'];
+                                                    $('.helpBackBtn').html(stockContent['buttonBack']);
+                                                    $('.helpContent').append(nextStep);
+                                                    $('.backBtn').click(function() {
+                                                        backContent();
+                                                    });
+                                                });
+                                            });
+
+                                            $('.noBtn').click(function() {
+                                                screenStack.push($('.helpContent').children().detach());
+                                                var nextStep = "<p>Newly admitted students have immediate access to their UVM email accounts.</p>";
+                                                nextStep += stockContent['accountConverge'];
+                                                nextStep += stockContent['activateNetId'];
+                                                nextStep += stockContent['buttonHelp'];
+                                                $('.helpBackBtn').html(stockContent['buttonBack']);
+                                                $('.helpContent').append(nextStep);
+                                                $('.backBtn').click(function() {
+                                                    backContent();
+                                                });
+                                                $('.moreHelpBtn').click(function() {
+                                                    screenStack.push($('.helpContent').children().detach());
+                                                    var nextStep = stockContent['techSupport'];
+                                                    $('.helpBackBtn').html(stockContent['buttonBack']);
+                                                    $('.helpContent').append(nextStep);
+                                                    $('.backBtn').click(function() {
+                                                        backContent();
+                                                    });
+                                                });
+                                            });
+                                        });
+                                    });
+                                    $('.curAffiliate').click(function() {
+                                        screenStack.push($('.helpContent').children().detach());
+                                        var nextStep = "<p><span class='bold'>UVM is now enforcing stronger password standards.</span> If your password is not working it may have expired. Try resetting your password.</p><div><button class='wideBtn' onclick='window.open(\"https://account.uvm.edu/\", \"_blank\");'>Reset password</button></div> <p><em>Note: You will need to have your CatCard (UVM Photo ID) in order to complete the password reset process.</em></p>";
+                                        nextStep += "<div><button class='sudoTextBtn moreHelpBtn wideBtn'>Still need help? <img class='infoicon' src='/webauth/images/icons/info-circle.png'></button></div>";
+                                        $('.helpBackBtn').html(stockContent['buttonBack']);
+                                        $('.helpContent').append(nextStep);
+                                        $('.backBtn').click(function() {
+                                            backContent();
+                                        });
+                                        $('.moreHelpBtn').click(function() {
+                                            screenStack.push($('.helpContent').children().detach());
+                                            var nextStep = "<h3>Do you have your CatCard (UVM Photo ID)?</h3>";
+                                            nextStep += "<ul>"
+                                            nextStep += "<li>"+stockContent['buttonYes'];
+                                            nextStep += "<li>"+stockContent['buttonNo'];
+                                            nextStep += "</ul>";
+                                            $('.helpBackBtn').html(stockContent['buttonBack']);
+                                            $('.helpContent').append(nextStep);
+                                            $('.backBtn').click(function() {
+                                                backContent();
+                                            });
+
+                                            $('.yesBtn').click(function() {
+                                                screenStack.push($('.helpContent').children().detach());
+                                                var nextStep = stockContent['techSupport'];
+                                                $('.helpBackBtn').html(stockContent['buttonBack']);
+                                                $('.helpContent').append(nextStep);
+                                                $('.backBtn').click(function() {
+                                                    backContent();
+                                                });
+                                            });
+
+                                            $('.noBtn').click(function() {
+                                                screenStack.push($('.helpContent').children().detach());
+                                                var nextStep = "<p><span class='bold'>Contact Account Services at (802) 656-2006</span></p>";
+                                                $('.helpBackBtn').html(stockContent['buttonBack']);
+                                                $('.helpContent').append(nextStep);
+                                                $('.backBtn').click(function() {
+                                                    backContent();
+                                                });
+                                            });
+                                        });
+                                    });
+                                    $('.formerStudent').click(function() {
+                                        screenStack.push($('.helpContent').children().detach());
+                                        var nextStep = "<p>Have you taken courses since the fall semester of 1988?</p>";
+                                        nextStep += "<ul>";
+                                        nextStep += "<li>"+stockContent['buttonYes'];
+                                        nextStep += "<li>"+stockContent['buttonNo'];
+                                        nextStep += "</ul>";
+                                        $('.helpBackBtn').html(stockContent['buttonBack']);
+                                        $('.helpContent').append(nextStep);
+                                        $('.backBtn').click(function() {
+                                            backContent();
+                                        });
+
+                                        $('.yesBtn').click(function() {
+                                            screenStack.push($('.helpContent').children().detach());
+                                            var nextStep = "<p><span class='bold'>All UVM alumni</span> who have academic history stored electronically will be able to activate their NetID to access their information online (and request transcripts).</p>";
+                                            nextStep += stockContent['activateNetId'];
+                                            nextStep += stockContent['buttonHelp'];
+                                            $('.helpBackBtn').html(stockContent['buttonBack']);
+                                            $('.helpContent').append(nextStep);
+                                            $('.backBtn').click(function() {
+                                                backContent();
+                                            });
+                                            $('.moreHelpBtn').click(function() {
+                                                screenStack.push($('.helpContent').children().detach());
+                                                var nextStep = stockContent['techSupport'];
+                                                $('.helpBackBtn').html(stockContent['buttonBack']);
+                                                $('.helpContent').append(nextStep);
+                                                $('.backBtn').click(function() {
+                                                    backContent();
+                                                });
+                                            });
+                                        });
+
+                                        $('.noBtn').click(function() {
+                                            screenStack.push($('.helpContent').children().detach());
+                                            var nextStep = "<p><span class='bold'>If you have not taken courses at UVM since the fall semester of 1988 you may not have electronic records.</span> Please call the Registrar's Office at (802) 656-2045 for assistance with requesting your transcript.</p>";
+                                            $('.helpBackBtn').html(stockContent['buttonBack']);
+                                            $('.helpContent').append(nextStep);
+                                            $('.backBtn').click(function() {
+                                                backContent();
+                                            });
+                                        });
+                                    });
+                                    $('.dontKnow').click(function() {
+                                        screenStack.push($('.helpContent').children().detach());
+                                        var nextStep = "<p><span class='bold'>Current Student:</span> Any student enrolled for a current of future term who is not considered a new admit.</p>";
+                                        nextStep += "<p><span class='bold'>New, Admitted Student:</span> A degree-seeking student who is not currently taking courses but who have been accepted by the Office of Admissions and will attend in a future term.</p>";
+                                        nextStep += "<p><span class='bold'>Former Student:</span> Any student who is on a leave of absence, has graduated, or who has not taken any course(s) in the past twelve moths and are not registered for courses in a future term.</p>";
+                                        nextStep += "<p><span class='bold'>Current Faculty/Staff:</span> Current faculty and staff members will appear in the UVM directory with their affiliation. If you do not appear in the UVM directory, please contact Human Resource Services.</p>";
+                                        nextStep += stockContent['buttonHelp'];
+                                        $('.helpBackBtn').html(stockContent['buttonBack']);
+                                        $('.helpContent').append(nextStep);
+                                        $('.backBtn').click(function() {
+                                            backContent();
+                                        });
+                                        $('.moreHelpBtn').click(function() {
+                                            screenStack.push($('.helpContent').children().detach());
+                                            var nextStep = stockContent['techSupport'];
+                                            $('.helpBackBtn').html(stockContent['buttonBack']);
+                                            $('.helpContent').append(nextStep);
+                                            $('.backBtn').click(function() {
+                                                backContent();
+                                            });
+                                        });
+                                    });
+                                </script>
+                                
+                        </div>
+                        <div class="helpNavBtns">
+                            <div class="helpBackBtn">
+                                &nbsp;
+                            </div>
+                            <div class="helpCloseBtn">
+                                <button class="helpBtn">Close <img class="iconBtn" src="/webauth/images/icons/close.png"></button>
+                            </div>
+                        </div>
+                    </div>
+        <script>
+            var screenStack = new Array();
+
+            $('.helpBtn').click(function() {
+                if($('.helpContent').length == 0) {
+                    return;
+                }
+
+                $('.helpWindow').toggleClass('invisible');
+                $('#auth-box-content').toggleClass('invisible');
+
+                $('.accntLnk').click(function(event) {
+                    window.open('https://account.uvm.edu/', '_blank');
+                });
+            });
+        </script>
+ 
+        
+        <script type="text/javascript">
+            var scratchContent;
+            $('.credDiv').focusin(function() {
+                $(this).removeClass('credDivNoFocus');
+                $(this).addClass('credDivFocus');
+            });
+            $('.credDiv').focusout(function() {
+                $(this).removeClass('credDivFocus');
+                $(this).addClass('credDivNoFocus');
+            });
+            $('.username').keyup(function() {
+                if ($(this).val().length == 0) {
+                    $(this).css('text-transform', 'none');
+                } else {
+                    $(this).css('text-transform', 'lowercase');
+                }
+            });
+            /*$('.username').focusin(function() {
+                $(this).attr('placeholder', '');
+                $(this).css('text-transform', 'lowercase');
+            });
+            $('.username').focusout(function() {
+                $(this).attr('placeholder', 'NetID');
+                $(this).css('text-transform', 'none');
+            });*/
+
+        </script>
+ 
+
+
+    </div><!--auth-box-->
+    </div><!--content-box-->
+    <footer id="footer">
+        <div id="photo-credit">
+            <img src="/webauth/images/icon-photo.png" />
+            <div id="photo-credit-text">
+                <span>Image by @IANMCHALE // Instagram your images</span>
+                <span>#instauvm for a chance to cover this space</span>
+            </div>
+        </div>
+        <div id="footer-bar">
+            Log out and close your browser window to best protect your privacy.
+        </div>
+        <div id="footer-rest"></div>
+    </footer>
+</div><!--login-topcontainer-->
+</body>
+</html>
+
+<!-- vim: set ts=2 sw=2 et noai sta: -->
