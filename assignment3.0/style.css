@@ -1,0 +1,138 @@
+/* Created by Aaron Longchamp */
+
+/* @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+   Main  */
+
+body
+{
+    margin: 36px auto;
+    width: 90%;
+    
+}
+
+#page
+{
+    margin: 0 auto 53px;
+    width: 93%;
+    border: 1px solid black;
+}
+
+#main
+{
+    float: left;
+    width: 66%;
+    background-color: #AC3030;
+}
+
+#other
+{
+    float: right;
+    width: 33%;
+    background-color: #990000;
+}
+
+/* @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+   Header */
+
+header h1
+{
+    padding: 1em;
+    background-color: #CC0000;
+}
+
+/* @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+   Navigation */
+
+nav ol li
+{
+    display: inline-block;
+    list-style-type: none;
+    padding-right: 3em;
+}
+
+/* @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+   Article */
+
+article h1, article p 
+{
+    padding: .2em 8.5% .2em 8.5%;
+}
+
+/* @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+   Aside */
+
+aside
+{
+    margin: 0 auto;
+    width: 69%;
+}
+
+aside h2, aside p
+{
+    padding: .2em 8.5% .2em 8.5%;
+}
+
+/* @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+   Footer */
+
+#form article #main
+{
+    margin: auto;
+    text-align: left;
+    width: 900px;
+}
+
+/* needed to clear any floats */
+
+fieldset
+{
+    border: 1px solid black;
+    clear: both;
+}
+
+/* pushes content to the left of the box */
+
+fieldset.contact
+{
+    float: left;
+}
+
+/* this causes the labels to display as block-level elements */
+
+fieldset.contact label
+{
+    display: block;
+    text-align: right;
+}
+
+fieldset.contact input
+{
+    width: 15em;
+}
+
+fieldset.buttons
+{
+    border: none;
+}
+fieldset.wrapper
+{
+    margin: auto;
+}
+
+fieldset.wrapper legend
+{
+    color: #620000;
+    font-size: 1em;
+    margin-top: 10px;
+}
+
+fieldset.wrapper > legend
+{
+    font-size: 2em;
+}
+
+label
+{
+    color: darkred;
+    display: block;
+}

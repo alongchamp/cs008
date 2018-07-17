@@ -1,0 +1,5 @@
+place,page,loc,name,type,img,cap,source,image
+Place,Page Title,Location,Name,Type,Img Class,Caption,Source,Image
+Hilton,Hilton,Pics/,hilt,.jpg,medium,"Photo was taken from the top floor of the Hilton in Burlington, VT.",Aaron Longchamp,hilt.jpg
+Church St,Curch Street,Pics/,cs,.png,medium,"Photo was taken on Church Street in Burlinton, VT.",Aaron Longchamp,cs.png
+Waterfront,Waterfront Park,Pics/,water,.gif,medium,"Photo was taken at the waterfront in Burlington, VT.",Aaron Longchamp,water.gif

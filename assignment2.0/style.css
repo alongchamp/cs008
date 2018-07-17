@@ -1,0 +1,62 @@
+// Style sheet created by Aaron Longchamp 
+
+*
+{
+    // changed the font size of every element
+    font-size: 12pt;
+}
+
+body
+{
+    // changes to background
+    margin-left: 6em;
+}
+#index
+{
+    background-color: #3366ff;
+}
+
+#hilton
+{
+    background-color: lightblue;
+}
+
+#churchst
+{
+    background-color: #ffffff;
+}
+
+#waterfront
+{
+    background-color: #000088;
+}
+
+#data
+{
+    background-color: #0000ff;
+}
+
+h1
+{
+    // changes to heading 1
+    color: #000000;
+    font-family: "sansserif";
+    font-weight: bold;
+    font-size: 1.5em;
+}
+
+header
+{
+    //  changes to the header
+    background-color: #ffffff;
+}
+
+.medium
+{
+    width: 300px;
+}
+
+table
+{   
+    border-style: solid ;
+}
