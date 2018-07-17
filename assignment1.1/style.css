@@ -1,0 +1,152 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : Sep 10, 2015, 11:05:43 AM
+    Author     : Aaron
+*/
+/* CSS designed by Robert M. Erickson */
+
+/* ===================  General Section  ==================================== */
+
+* {
+    font-size: 12pt;  /* sets the font size for all elements. */
+    /* look up reset style sheet */
+}
+
+body {
+    background-color: #00CF00;
+    margin-left: 6em;
+}
+
+h1 {
+    color: #000000;
+    font-family: "sansserif";
+    font-weight: bold;
+    font-size: 1.5em;
+}
+
+h2 {
+    color: #000000;
+    font-family: "sansserif";
+    font-weight: bold;
+    font-size: 1.25em;
+}
+
+h3 {
+    color: black;
+    font-family: 'times new roman';
+    font-weight: bold;
+    font-size: 1em;
+}
+
+h4 {
+    color: #000000;
+    font-family: "sansserif";
+    font-weight: bold;
+    font-size: .8em;	
+}
+
+h5 { 
+    color: #000000;
+    font-family: "sansserif";
+    font-weight: bold;
+    font-size: .6em;	
+}
+
+h6 {
+    color: #000000;
+    font-family: "sansserif";
+    font-weight: bold;
+    font-size: .5em;	
+}
+ol ol ol li {
+    list-style: lower-alpha
+}
+
+ol ol li {
+    font-weight: normal;
+    list-style: decimal;
+    padding-top: 0em
+}
+
+ol li {
+    list-style-type: none;
+    display: inline-block;
+    width: 10em;
+    text-align: center;
+}
+
+ul ul ul li { 
+    list-style: circle;
+}
+
+ul ul li { 
+    list-style: square;
+}
+
+ul li { 
+    list-style: disc;
+}
+
+/* ===================  Header Section  ==================================== */
+/* now i would have a section that corresponds to my html sections.          */
+header {
+    background-color: #dddddd;
+}
+
+/* ===================  Navigation Section  ================================= */
+
+
+
+
+/* ===================  Home Page        ==================================== */
+/* -------------------------------------------------------------------------- */
+#home {  
+    background-color: #aaaaaa;
+}
+
+#home p {
+    /* this rule will give all the paragraphs on the home page a first line  */
+    /* indent of 3 em. it only effects paragraphs that are contained inside  */
+    /* the element with the id of home, this replaces using an embeded or    */
+    /* level style */
+    text-indent: 3em;
+}
+
+/* ===================  General Class Section  ============================= */
+/* I can add any generic classes here. Technically i can place these rules   */
+/* anywhere in the style sheet. This just helps to organize everything.     */
+.firstLine {
+    text-indent: 3em;
+}
+
+figure.img-left {
+    border: thin solid black;
+    float: right;
+    margin-left: 1em;
+    padding: 0.5em;
+    background-color: darkgreen;
+}
+.small {
+    width: 150px;
+}
+figcaption {
+    color: white;
+    font-family: "sansserif";
+    text-align: center;
+}
+
+figure.img-right {
+    border: thin solid black;
+    float: left;
+    margin-left: 1em;
+    padding: 0.5em;
+    background-color: darkgreen;
+}
+
+.med {
+    width: 300px;
+}
